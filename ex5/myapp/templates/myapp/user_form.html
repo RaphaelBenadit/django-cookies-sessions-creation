@@ -1,0 +1,15 @@
+<!-- myapp/templates/myapp/user_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Form</title>
+</head>
+<body>
+    <h1>Enter Username and Email</h1>
+    <form method="post">
+        {% csrf_token %}  <!-- This token is required for form security -->
+        {{ form.as_p }}    <!-- Render the form as paragraphs -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
